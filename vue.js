@@ -1,11 +1,5 @@
 new Vue({
-  // このelにHTMLのidを指定することで、そのidのDOMでVue.jsのインスタンスがインポートされる
   el: '#app',
-  // dataは、定義されたVue.jsのインスタンスが持つ属性（値）
-  // data: {
-  //   counter: 0
-  // },
-
   data: {
     name: 'A山B郎',
     course: 'Webエンジニアコース',
@@ -17,12 +11,8 @@ new Vue({
       { id: 3, name: '斉藤一起', course: 'Webエンジニアコース', acceptancePeriod: '2017年11月期' }
     ]
   },
-  // methodsに、Vue.jsのインスタンスに使用させたいメソッドを記載する
-  // t = 3
   methods: {
     addStudent: function() {
-        // この function() { } の中にaddStudentメソッド
-        // （入力欄に入力された値と、ID値（最後に登録されたID値+1の値）が新たに出現する機能）の処理を書く
     this.defaultLastId += 1
     this.students.push( {id: this.defaultLastId, name: this.name, course: this.course, acceptancePeriod: this.acceptancePeriod } );
     }
